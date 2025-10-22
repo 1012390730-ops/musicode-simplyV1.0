@@ -17,10 +17,5 @@
       "dest": "/api/process-music.py",
       "methods": ["GET"]
     }
-  ],
-  "functions": {
-    "api/process-music.py": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
