@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/process-music.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/process-music",
+      "dest": "/api/process-music.py",
+      "methods": ["POST", "OPTIONS"]
+    },
+    {
+      "src": "/",
+      "dest": "/api/process-music.py",
+      "methods": ["GET"]
+    }
+  ],
+  "functions": {
+    "api/process-music.py": {
+      "maxDuration": 30
+    }
+  }
+}
